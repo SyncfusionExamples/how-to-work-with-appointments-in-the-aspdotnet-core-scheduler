@@ -1,6 +1,6 @@
-# How to Drag and Drop Events from an External Source into the ASP.NET Core Scheduler
+# How to Work with Appointments in the ASP.NET Core Scheduler
 
-A quick-start project that shows how to manage appointments in the ASP.NET Core Scheduler control. This project contains simple code to create appointments for the entire day, set up recurring events, make appointments read-only and block specific time slots.
+A quick-start project that shows how to manage appointments in the ASP.NET Core Scheduler control. This project contains simple code to create appointments for the entire day, set up recurring events, make appointments read-only, and block specific time slots.
 
 Check out this online demo for recurring events in the Syncfusion ASP.NET Core Scheduler control:
 https://ej2.syncfusion.com/aspnetcore/Schedule/RecurrenceEvents#/fluent 
