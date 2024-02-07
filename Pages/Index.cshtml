@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@using Syncfusion.EJ2
+@{
+    List<AppointmentData> appData = new List<AppointmentData>();
+    appData.Add(new AppointmentData
+            {
+                Id = 1,
+                Summary = "Project Discussion",
+                Start = new DateTime(2024, 1, 31, 9, 30, 0),
+                End = new DateTime(2024, 1, 31, 10, 0, 0),
+                IsAllDay = true,
+                IsBlock = true
+            });
+    appData.Add(new AppointmentData
+            {
+                Id = 2,
+                Summary = "Scrum Meeting",
+                Start = new DateTime(2024, 1, 29, 10, 30, 0),
+                End = new DateTime(2024, 1, 29, 11, 0, 0),
+                RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5"
+            });
+    appData.Add(new AppointmentData
+            {
+                Id = 3,
+                Summary = "Release Updates",
+                Start = new DateTime(2024, 2, 1, 11, 30, 0),
+                End = new DateTime(2024, 2, 1, 12, 30, 0),
+                IsReadonly = true
+            });
+}
+
+<ejs-schedule 
+    id="schedule" 
+    startHour="09:00"
+    endHour="18:00">
+    <e-schedule-eventsettings datasource='appData' enableTooltip=true>
+        <e-eventsettings-fields>
+            <e-field-subject name="Summary" title="Event"></e-field-subject>
+            <e-field-starttime name="Start" title="BeginsAt"></e-field-starttime>
+            <e-field-endtime name="End" title="EndsAt"></e-field-endtime>
+        </e-eventsettings-fields>
+    </e-schedule-eventsettings>
+</ejs-schedule>
+
+
+
